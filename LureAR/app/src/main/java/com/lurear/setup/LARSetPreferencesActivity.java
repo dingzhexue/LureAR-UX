@@ -13,7 +13,7 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set_preferences);
+        setContentView(R.layout.activity_set_preference);
     }
 
     @Override

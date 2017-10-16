@@ -40,8 +40,8 @@ public class LARSignInActivity extends LARBaseActivity {
 
     @OnClick (R.id.btLogin)
     void onLoginClicked(View view) {
-        Intent intent = new Intent(LARSignInActivity.this, LARAddProfilePictureActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(LARSignInActivity.this, LARAddProfilePictureActivity.class);
+//        startActivity(intent);
     }
 
     @OnClick (R.id.btFacebook)

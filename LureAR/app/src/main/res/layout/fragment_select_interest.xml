@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -8,15 +9,16 @@
         android:orientation="horizontal"
         android:weightSum="1">
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.15"
+            android:layout_marginLeft="@dimen/common_padding_medium1"
+            android:layout_marginRight="@dimen/common_padding_medium1"
             android:gravity="center_vertical|center_horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_gender"
+                android:src="@mipmap/ic_heart"
                 android:adjustViewBounds="true"
                 android:id="@+id/btnBack"/>
         </LinearLayout>
@@ -37,7 +39,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Interested In"
+                        android:text="Select Interests"
                         android:textSize="@dimen/font_medium4"
                         android:layout_gravity="center_vertical"
                         android:textColor="@android:color/black"
@@ -54,41 +56,47 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:layout_weight="0.5"
-                        android:weightSum="1"
-                        android:padding="2dp">
+                        android:layout_weight="0.33">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_btn_male_dis"
+                            android:layout_gravity="center_vertical|top"
+                            android:src="@mipmap/ic_football"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnMale"
-                            android:layout_weight="0.45"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="4dp"/>
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_btn_femail_ena"
-                            android:adjustViewBounds="true"
-                            android:id="@+id/btnFemail"
-                            android:layout_weight="0.55"
-                            android:layout_gravity="center_vertical" />
+                            android:id="@+id/btnFootball"
+                            />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:layout_marginRight="@dimen/common_padding_medium1">
+                        android:layout_weight="0.33">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_btn_transgender_dis"
+                            android:layout_gravity="center_vertical|top"
+                            android:src="@mipmap/ic_car"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnTransGender"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="5dp"/>
+                            android:id="@+id/btnCar"
+                            />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.33"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|top"
+                            android:src="@mipmap/ic_add"
+                            android:adjustViewBounds="true"
+                            android:id="@+id/btnAdd"
+                            />
+                    </LinearLayout>
+
 
                 </LinearLayout>
 

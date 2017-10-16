@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LureAR</string>
-
+    <!-- Splash -->
+    <string name="splash">Copyright 2017, LureAR App. All Rights Reserved.</string>
     <!-- SignIn & SignUp -->
     <string name="signin_continue">Sign in to continue</string>
     <string name="email">Email</string>
@@ -16,6 +17,12 @@
     <string name="sign_up_with_social">Sign up with social</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="signin">Sign in</string>
+    <!--Add profile picture-->
+    <string name="profile_picture">Profile Picture</string>
+    <string name="add_picture">Add Profile Picture</string>
+    <string name="add_picture_description">First take your facial profile photo</string>
+    <string name="save">Save</string>
+    <string name="personal_info">Personal Info</string>
 
     <!-- Onboarding -->
     <string name="skip">Skip</string>

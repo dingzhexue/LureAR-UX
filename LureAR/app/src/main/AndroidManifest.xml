@@ -36,6 +36,15 @@
         <activity android:name=".setup.LARSetPreferencesActivity"
             android:theme="@style/AppThemeFullScreen"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".onboard.ui.LAROnboardActivity"
+            android:theme="@style/AppThemeFullScreen"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".setup.LARPersonalInfoActivity"
+            android:theme="@style/AppThemeFullScreen"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

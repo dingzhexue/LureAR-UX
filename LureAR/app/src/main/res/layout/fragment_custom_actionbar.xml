@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TableRow>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_back"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnBack"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.15"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_info"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_medium3"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="@dimen/common_padding_small2"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/common_padding_medium1"
+            />
+
+        <TextView
+            android:id="@+id/btSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/common_padding_medium1"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/common_padding_small2"
+            android:layout_weight="0.2"
+            />
+
+
+    </TableRow>
+
+</TableLayout>

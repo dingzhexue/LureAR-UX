@@ -8,12 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.lurear.R;
+import com.lurear.base.LARBaseActivity;
 import com.lurear.setup.LARAddProfilePictureActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class LARSignUpActivity extends Activity {
+public class LARSignUpActivity extends LARBaseActivity {
     @BindView(R.id.btRegister)
     Button mIBRegister;
 
@@ -30,6 +31,11 @@ public class LARSignUpActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+    }
+
+    @Override
+    public boolean supportOffline() {
+        return false;
     }
 
     @OnClick(R.id.btRegister)
