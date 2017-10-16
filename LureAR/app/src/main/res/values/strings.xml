@@ -23,11 +23,23 @@
     <string name="add_picture_description">First take your facial profile photo</string>
     <string name="save">Save</string>
     <string name="personal_info">Personal Info</string>
-
+    <string name="add_username">Add Username</string>
+    <string name="select_age">Select Age</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_interests">Select Interests</string>
+    <string name="interest_in">Interested In</string>
+    <string name="select_age_group">Select Age Group</string>
+    <string name="choose_distance">Choose Distance(Radius)</string>
+    <string name="years">Years</string>
+    <string name="miles">miles</string>
+    <string name="set_prefer">Set Preferences</string>
+    <string name="emailexample">Jang@hotmail.com</string>
     <!-- Onboarding -->
     <string name="skip">Skip</string>
-
     <!-- Error message -->
     <string name="something_went_wrong">Something went wrong!</string>
+
+    <string name="indicator_format">%02d Years</string>
+    <string name="indicator_format_distance">%01d Miles</string>
 </resources>
 

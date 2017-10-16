@@ -10,7 +10,7 @@
             android:src="@mipmap/ic_back"
             android:layout_gravity="center_vertical"
             android:background="@android:color/transparent"
-            android:id="@+id/btnBack"
+            android:id="@+id/btBack"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_weight="0.15"/>

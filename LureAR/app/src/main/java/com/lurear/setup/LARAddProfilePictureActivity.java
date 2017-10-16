@@ -2,7 +2,6 @@ package com.lurear.setup;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -20,20 +19,11 @@ public class LARAddProfilePictureActivity extends LARBaseActivity {
     @BindView(R.id.btTakePhoto)
     ImageView mIBTakePhoto;
 
-    @BindView(R.id.toolbar)
-    Toolbar mIBToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_profile_picture);
-
-        if (mIBToolbar != null) {
-            setSupportActionBar(mIBToolbar);
-            getSupportActionBar().setTitle("Profile Picture");
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        }
     }
 
     @Override

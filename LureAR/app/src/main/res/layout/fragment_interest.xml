@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
@@ -8,23 +9,24 @@
         android:orientation="horizontal"
         android:weightSum="1">
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.15"
+            android:layout_marginLeft="@dimen/common_padding_medium2"
+            android:layout_marginRight="@dimen/common_padding_medium1"
             android:gravity="center_vertical|center_horizontal">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_gender"
-                android:adjustViewBounds="true"
-                android:id="@+id/btnBack"/>
+                android:adjustViewBounds="true" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.85">
+            android:layout_marginRight="@dimen/common_padding_large"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -33,15 +35,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5">
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="@dimen/common_padding_medium2">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Interested In"
+                        android:text="@string/interest_in"
                         android:textSize="@dimen/font_medium4"
-                        android:layout_gravity="center_vertical"
+                        android:layout_gravity="bottom"
                         android:textColor="@android:color/black"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/common_padding_small3"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -49,6 +53,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_weight="0.5"
+                    android:layout_marginLeft="@dimen/common_padding_medium1"
                     android:weightSum="1">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -56,37 +61,37 @@
                         android:orientation="horizontal"
                         android:layout_weight="0.5"
                         android:weightSum="1"
-                        android:padding="2dp">
+                        android:gravity="top"
+                        >
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_btn_male_dis"
+                            android:src="@mipmap/ic_btn_male_ena"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnMale"
+                            android:id="@+id/btMale"
                             android:layout_weight="0.45"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginRight="4dp"/>
+                            android:layout_marginRight="4dp"
+                            />
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_btn_femail_ena"
+                            android:src="@mipmap/ic_btn_femail_dis"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnFemail"
+                            android:id="@+id/btFemail"
                             android:layout_weight="0.55"
-                            android:layout_gravity="center_vertical" />
+                            />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="0.5"
-                        android:layout_marginRight="@dimen/common_padding_medium1">
+                        android:gravity="top">
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@mipmap/ic_btn_transgender_dis"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnTransGender"
-                            android:layout_gravity="center_vertical"
+                            android:id="@+id/btTransGender"
                             android:layout_marginLeft="5dp"/>
                     </LinearLayout>
 

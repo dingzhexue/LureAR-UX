@@ -7,4 +7,5 @@
     <color name="colorFont">@color/black</color>
     <color name="colorDescription">#909090</color>
     <color name="colorAppRed">#ff2869</color>
+    <color name="colorIndicator">#f2f4f4</color>
 </resources>

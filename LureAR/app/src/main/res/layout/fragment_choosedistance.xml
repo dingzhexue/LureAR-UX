@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,97 +15,101 @@
             android:layout_marginLeft="@dimen/common_padding_medium1"
             android:layout_marginRight="@dimen/common_padding_medium1"
             android:gravity="center_vertical|center_horizontal">
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_pin"
                 android:adjustViewBounds="true"
-                android:id="@+id/btnPin"/>
+                android:id="@+id/btnBack"
+                android:layout_marginBottom="@dimen/common_padding_small2"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
             android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="1">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_medium">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_distance"
+                    android:textSize="@dimen/font_medium4"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/common_padding_small2">
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:layout_marginLeft="24dp">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Choose Distance(Radius)"
-                        android:textSize="@dimen/font_medium4"
-                        android:layout_gravity="center_vertical"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"/>
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_medium2"
+                        android:text="0.5"
+                        android:layout_marginTop="@dimen/common_padding_medium"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_medium2"
+                        android:text="@string/miles"/>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="0.5"
-                    android:weightSum="1">
-                    <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top">
+                    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/common_padding_medium"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical|center_horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_medium2"
-                            android:text="50"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:textSize="@dimen/font_medium2"
-                            android:text="mtrs"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-
-                        <SeekBar
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/seekBar"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:layout_marginRight="60dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_medium2"
-                            android:text="500" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_medium2"
-                            android:text="mtrs" />
-                    </LinearLayout>
+                        android:layout_height="wrap_content"
+                        app:dsb_indicatorColor="@color/colorAccent"
+                        app:dsb_indicatorFormatter="@string/indicator_format_distance"
+                        app:dsb_progressColor="@color/colorAccent"
+                        app:dsb_rippleColor="@android:color/holo_green_light"
+                        app:dsb_mirrorForRtl="false"
+                        app:dsb_trackColor="@android:color/darker_gray"
+                        app:dsb_min="0"
+                        app:dsb_max="5" />
 
                 </LinearLayout>
-
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="@dimen/common_padding_large">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_medium2"
+                        android:text="5"
+                        android:layout_marginTop="@dimen/common_padding_medium"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/miles"
+                        android:textSize="@dimen/font_medium2"/>
+                </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

@@ -16,7 +16,10 @@ public class LARConst extends BaseConst {
     public static String WEB_API_SERVER_URL;
     public final static String DEV_WEB_API_SERVER_URL = "https://lurear.com";
     public final static String PRODUCT_WEB_API_SERVER_URL = "https://lurear.com";
-
+    public final static int ONBOARD_PADDING=60;
+    public final static float ONBOARD_DOTSIZE1=35;
+    public final static float ONBOARD_DOTSIZE2=50;
+    public final static String ONBOARD_DOTCOLOR="#f2f4f4";
     public static void init(Context context) {
         RemoteLogger.d(TAG, "Init constant");
 
