@@ -11,6 +11,7 @@ import com.lurear.app.LARCommon;
 import com.lurear.base.LARBaseActivity;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class LARSelectLocationActivity extends LARBaseActivity {
     @BindView(R.id.btSelectLocation)
@@ -20,13 +21,11 @@ public class LARSelectLocationActivity extends LARBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_location);
+    }
 
-        mIBSelectLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LARCommon.showAddGeoFenceDialog(LARSelectLocationActivity.this);
-            }
-        });
+    @OnClick(R.id.btSelectLocation)
+    void selectLocationClickListener() {
+        LARCommon.showAddGeoFenceDialog(LARSelectLocationActivity.this);
     }
 
     @Override

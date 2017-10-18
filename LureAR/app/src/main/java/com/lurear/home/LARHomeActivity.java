@@ -26,29 +26,23 @@ public class LARHomeActivity extends LARBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+    }
 
-        mIBHomeSide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LARHomeActivity.this, LARHomeSideMenuActivity.class);
-                startActivity(intent);
-            }
-        });
+    @OnClick(R.id.btHomePin)
+    void homePinClickListener() {
+        LARCommon.showDistancePickerDialog(LARHomeActivity.this);
+    }
 
-        mIBHomePin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                LARCommon.showDistancePickerDialog(LARHomeActivity.this);
-            }
-        });
+    @OnClick(R.id.btSelectGeoFence)
+    void selectGeoFenceClickListener() {
+        Intent intent = new Intent(LARHomeActivity.this, LARSelectLocationActivity.class);
+        startActivity(intent);
+    }
 
-        mIBSelectGeoFence.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LARHomeActivity.this, LARSelectLocationActivity.class);
-                startActivity(intent);
-            }
-        });
+    @OnClick(R.id.btHomeSide)
+    void homeSideClickListener() {
+        Intent intent = new Intent(LARHomeActivity.this, LARHomeSideMenuActivity.class);
+        startActivity(intent);
     }
 
     @Override

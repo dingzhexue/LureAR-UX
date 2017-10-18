@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
+import com.lurear.home.LARHomeActivity;
+import com.lurear.home.LARSelectLocationActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -44,45 +46,37 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
-
-        mIBBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
-        mIBMale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mIBMale.setImageResource(R.mipmap.ic_btn_male_ena);
-                mIBFemale.setImageResource(R.mipmap.ic_btn_femail_dis);
-                mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_dis);
-            }
-        });
-
-        mIBFemale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mIBMale.setImageResource(R.mipmap.ic_btn_male_dis);
-                mIBFemale.setImageResource(R.mipmap.ic_btn_femail_ena);
-                mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_dis);
-            }
-        });
-
-        mIBTransGender.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mIBMale.setImageResource(R.mipmap.ic_btn_male_dis);
-                mIBFemale.setImageResource(R.mipmap.ic_btn_femail_dis);
-                mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_ena);
-            }
-        });
     }
 
     @Override
     public boolean supportOffline() {
         return false;
+    }
+
+    @OnClick(R.id.btBack)
+    void backClickListener() {
+        finish();
+    }
+
+    @OnClick(R.id.btMale)
+    void maleClickListener() {
+        mIBMale.setImageResource(R.mipmap.ic_btn_male_ena);
+        mIBFemale.setImageResource(R.mipmap.ic_btn_femail_dis);
+        mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_dis);
+    }
+
+    @OnClick(R.id.btFemail)
+    void femaleClickListener() {
+        mIBMale.setImageResource(R.mipmap.ic_btn_male_dis);
+        mIBFemale.setImageResource(R.mipmap.ic_btn_femail_ena);
+        mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_dis);
+    }
+
+    @OnClick(R.id.btTransGender)
+    void selectGeoFenceClickListener() {
+        mIBMale.setImageResource(R.mipmap.ic_btn_male_dis);
+        mIBFemale.setImageResource(R.mipmap.ic_btn_femail_dis);
+        mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_ena);
     }
 
     @OnClick(R.id.btSave)

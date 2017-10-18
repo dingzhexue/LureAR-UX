@@ -1,5 +1,6 @@
 package com.lurear.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +10,7 @@ import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 public class LARHomeSideMenuActivity extends LARBaseActivity {
     @BindView(R.id.btHomeMenu)
@@ -18,13 +20,11 @@ public class LARHomeSideMenuActivity extends LARBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_menu);
+    }
 
-        mIBHomeMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+    @OnClick(R.id.btHomeMenu)
+    void homeMenuClickListener() {
+        finish();
     }
 
     @Override
