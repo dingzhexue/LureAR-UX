@@ -1,5 +1,6 @@
 package com.lurear.setup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -7,6 +8,9 @@ import android.widget.ImageView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
+import com.lurear.home.LARHomeActivity;
+import com.lurear.signup.ui.LARSignInActivity;
+import com.lurear.signup.ui.LARSignUpActivity;
 
 import butterknife.BindView;
 
@@ -26,6 +30,9 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
 
     @BindView(R.id.btTransGender)
     ImageView mIBTransGender;
+
+    @BindView(R.id.btSave)
+    ImageView mIBSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +70,14 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
                 mIBMale.setImageResource(R.mipmap.ic_btn_male_dis);
                 mIBFemale.setImageResource(R.mipmap.ic_btn_femail_dis);
                 mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_ena);
+            }
+        });
+
+        mIBSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LARSetPreferencesActivity.this, LARHomeActivity.class);
+                startActivity(intent);
             }
         });
     }

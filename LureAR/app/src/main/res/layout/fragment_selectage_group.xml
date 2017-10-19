@@ -38,9 +38,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/select_age_group"
-                    android:textSize="@dimen/font_medium4"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black" />
             </LinearLayout>
 
 
@@ -59,14 +58,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:textSize="@dimen/font_medium2"
-                        android:text="18"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/age_min"
                         android:layout_marginTop="@dimen/common_padding_medium"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/font_medium2"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/years"/>
                 </LinearLayout>
                 <LinearLayout
@@ -87,7 +86,7 @@
                         app:dsb_mirrorForRtl="false"
                         app:dsb_trackColor="@android:color/darker_gray"
                         app:dsb_min="18"
-                        app:dsb_max="32" />
+                        app:dsb_max="100" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -98,15 +97,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:textSize="@dimen/font_medium2"
-                        android:text="32"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/age_max"
                         android:layout_marginTop="@dimen/common_padding_medium"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/years"
-                        android:textSize="@dimen/font_medium2"/>
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

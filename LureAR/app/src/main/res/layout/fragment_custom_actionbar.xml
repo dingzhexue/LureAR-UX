@@ -5,15 +5,15 @@
     android:orientation="horizontal">
     <TableRow>
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_back"
-            android:layout_gravity="center_vertical"
-            android:background="@android:color/transparent"
-            android:id="@+id/btBack"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="0.15"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_back"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:id="@+id/btBack"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.15"/>
 
 
         <TextView
@@ -37,7 +37,7 @@
             android:text="@string/save"
             android:textColor="@android:color/holo_red_light"
             android:textStyle="bold"
-            android:textSize="@dimen/common_padding_medium1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:gravity="center_horizontal"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="@dimen/common_padding_small2"

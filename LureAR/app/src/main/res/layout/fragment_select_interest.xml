@@ -44,9 +44,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/select_interests"
-                        android:textSize="@dimen/font_medium4"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"/>
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/black" />
                 </LinearLayout>
 
                 <LinearLayout

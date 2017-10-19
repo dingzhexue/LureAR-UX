@@ -62,8 +62,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/add_username"
-                            android:textSize="@dimen/font_medium4"
-                            android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+
                             android:textColor="@android:color/black"/>
                     </LinearLayout>
                     <LinearLayout
@@ -75,7 +75,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/emailexample"
-                            android:textSize="@dimen/font_medium2"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
                             android:textColor="@android:color/darker_gray"
                             android:layout_marginLeft="@dimen/common_padding_medium2"/>
                     </LinearLayout>

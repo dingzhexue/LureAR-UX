@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.gpit.android.ui.common.BaseSplashActivity;
 import com.lurear.R;
+import com.lurear.home.LARHomeActivity;
 import com.lurear.onboard.ui.LAROnboardActivity;
 import com.lurear.signup.ui.LARSignInActivity;
 
@@ -24,6 +25,7 @@ public class LARSplashActivity extends BaseSplashActivity {
     @Override
     public Class<? extends Activity> getNextActivity() {
         return LAROnboardActivity.class;
+//        return LARHomeActivity.class;
     }
 
     @Override

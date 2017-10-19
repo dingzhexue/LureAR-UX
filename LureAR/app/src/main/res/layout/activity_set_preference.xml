@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_btn_save"
                 android:adjustViewBounds="true"
-                android:id="@+id/btnSave"
+                android:id="@+id/btSave"
                 />
         </LinearLayout>
     </LinearLayout>

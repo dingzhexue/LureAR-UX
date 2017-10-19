@@ -10,6 +10,7 @@
     <dimen name="actionbar_evaluation">4dp</dimen>
 	
     <!-- Common -->
+    <dimen name="common_padding_small">1dp</dimen>
     <dimen name="common_padding_small0">2dp</dimen>
     <dimen name="common_padding_small1">5dp</dimen>
     <dimen name="common_reverse_padding_small0">-2dp</dimen>
@@ -24,7 +25,14 @@
     <dimen name="common_padding_large">30dp</dimen>
     <dimen name="common_padding_large1">40dp</dimen>
     <dimen name="common_padding_large2">50dp</dimen>
+    <dimen name="common_padding_large3">60dp</dimen>
+    <dimen name="common_padding_large4">70dp</dimen>
     <dimen name="common_padding_extra_large">80dp</dimen>
+    <dimen name="common_padding_extra_large1">100dp</dimen>
+    <dimen name="common_padding_extra_large2">120dp</dimen>
+    <dimen name="common_padding_extra_large3">150dp</dimen>
+    <dimen name="common_padding_extra_large4">140dp</dimen>
+    <dimen name="common_padding_extra_large5">90dp</dimen>
     
    	<!-- Font Size -->
    	<dimen name="font_small0">8sp</dimen>
@@ -43,4 +51,7 @@
     <dimen name="font_extra2">34sp</dimen>
     <dimen name="font_extra3">45sp</dimen>
     <dimen name="font_extra4">50sp</dimen>
+
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="activity_vertical_margin">64dp</dimen>
 </resources>
