@@ -1,6 +1,5 @@
-package com.lurear.CheckInOut;
+package com.lurear.checkinout;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.lurear.R;

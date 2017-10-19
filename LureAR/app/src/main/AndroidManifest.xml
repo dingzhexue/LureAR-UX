@@ -58,7 +58,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTransparent" />
         <activity
-            android:name=".CheckInOut.LARCheckInOutActivity"
+            android:name=".checkinout.LARCheckInOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreen"/>
     </application>
