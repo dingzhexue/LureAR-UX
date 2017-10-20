@@ -43,8 +43,4 @@
     <attr name="sectionListView.listTextViewTextSize" format="dimension" />
     <attr name="sectionListView.listItemPadding" format="dimension" />
     <attr name="sectionListView.listItemBackground" format="color|reference" />
-
-    <declare-styleable name="TintableImageButton">
-        <attr name="tint" format="reference|color" />
-    </declare-styleable>
 </resources>
