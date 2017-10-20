@@ -3,9 +3,12 @@ package com.lurear.app;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.support.design.widget.BottomSheetDialog;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -68,6 +71,7 @@ public class LARCommon {
     private static Dialog pickerDistanceDialog;
     private static Dialog pickerAddGeoFenceDialog;
     private static Dialog pickerHomeGeoFenceDialog;
+    private static Dialog pickerAddInterestsDialog;
 
     public static void hidePickerDialog() {
         if (pickerDistanceDialog != null && pickerDistanceDialog.isShowing()) {
@@ -89,15 +93,24 @@ public class LARCommon {
             pickerHomeGeoFenceDialog = null;
         }
     }
+    public static void hideAddInterestsPickerDialog() {
+        if (pickerAddInterestsDialog != null && pickerAddInterestsDialog.isShowing()) {
+            pickerAddInterestsDialog.hide();
+            pickerAddInterestsDialog = null;
+        }
+    }
 
     public static void showDistancePickerDialog(final Context context) {
         hidePickerDialog();
 
         pickerDistanceDialog = new Dialog(context);
+
+        pickerDistanceDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         pickerDistanceDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         pickerDistanceDialog.setContentView(R.layout.activity_save_distance_picker);
-        pickerDistanceDialog.setCancelable(false);
-        pickerDistanceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        pickerDistanceDialog.setCancelable(true);
+        pickerDistanceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pickerDistanceDialog.getWindow().setGravity(Gravity.BOTTOM);
         pickerDistanceDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         Button btnCL = (Button)pickerDistanceDialog.findViewById(R.id.btSave);
@@ -111,21 +124,22 @@ public class LARCommon {
     }
 
     public static void showAddGeoFenceDialog(final Context context) {
-        hideAddGeoFencePickerDialog();
+        //hideAddGeoFencePickerDialog();
 
         pickerAddGeoFenceDialog = new Dialog(context);
         pickerAddGeoFenceDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         pickerAddGeoFenceDialog.setContentView(R.layout.activity_add_geo_fence);
-        pickerAddGeoFenceDialog.setCancelable(false);
-        pickerAddGeoFenceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        pickerAddGeoFenceDialog.setCancelable(true);
+        pickerAddGeoFenceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pickerAddGeoFenceDialog.getWindow().setGravity(Gravity.BOTTOM);
         pickerAddGeoFenceDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         Button btnCL = (Button)pickerAddGeoFenceDialog.findViewById(R.id.btSave);
         btnCL.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                hideAddGeoFencePickerDialog();
-
                 showHomeGeoFenceDialog(context);
+                hideAddGeoFencePickerDialog();
+
             }
         });
 
@@ -133,24 +147,45 @@ public class LARCommon {
     }
 
     public static void showHomeGeoFenceDialog(final Context context) {
-        hideHomeGeoFencePickerDialog();
 
         pickerHomeGeoFenceDialog = new Dialog(context);
         pickerHomeGeoFenceDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         pickerHomeGeoFenceDialog.setContentView(R.layout.activity_home_geo_fence);
-        pickerHomeGeoFenceDialog.setCancelable(false);
-        pickerHomeGeoFenceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        pickerHomeGeoFenceDialog.setCancelable(true);
+        pickerHomeGeoFenceDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         pickerHomeGeoFenceDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-//        Button btnCL = (Button)pickerHomeGeoFenceDialog.findViewById(R.id.btSave);
-//        btnCL.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                hideHomeGeoFencePickerDialog();
-//
-//
-//            }
-//        });
-
+        pickerHomeGeoFenceDialog.getWindow().setGravity(Gravity.BOTTOM);
+        Button btnCL = (Button)pickerHomeGeoFenceDialog.findViewById(R.id.btSave);
+        btnCL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                hideHomeGeoFencePickerDialog();
+            }
+        });
+        Button btnAddNewGeoFence = (Button)pickerHomeGeoFenceDialog.findViewById(R.id.btAddNewGeoFence);
+        btnAddNewGeoFence.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                hideHomeGeoFencePickerDialog();
+            }
+        });
         pickerHomeGeoFenceDialog.show();
+    }
+
+    public static void showAddInterestsDialog(final Context context) {
+
+        pickerAddInterestsDialog = new Dialog(context);
+        pickerAddInterestsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        pickerAddInterestsDialog.setContentView(R.layout.activity_add_interest);
+        pickerAddInterestsDialog.setCancelable(true);
+        pickerAddInterestsDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pickerAddInterestsDialog.getWindow().setGravity(Gravity.BOTTOM);
+        pickerAddInterestsDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button btnCL = (Button)pickerAddInterestsDialog.findViewById(R.id.btAddInterests);
+        btnCL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                hideAddInterestsPickerDialog();
+            }
+        });
+        pickerAddInterestsDialog.show();
+
     }
 }

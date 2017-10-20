@@ -25,6 +25,8 @@ public class LARHomeSideMenuActivity extends LARBaseActivity {
     @OnClick(R.id.btHomeMenu)
     void homeMenuClickListener() {
         finish();
+
+        overridePendingTransition(R.anim.enter_rl, R.anim.exit_rl);
     }
 
     @Override

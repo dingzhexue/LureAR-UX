@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.setup.LARAddProfilePictureActivity;
+import com.lurear.setup.LARPersonalInfoActivity;
+import com.lurear.setup.LARSetPreferencesActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

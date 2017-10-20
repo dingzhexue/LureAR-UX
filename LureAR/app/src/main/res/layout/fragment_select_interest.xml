@@ -95,10 +95,9 @@
                             android:scaleType="centerInside"
                             android:src="@mipmap/ic_add"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnAdd"
+                            android:id="@+id/btAddInterests"
                             />
                     </LinearLayout>
-
 
                 </LinearLayout>
 

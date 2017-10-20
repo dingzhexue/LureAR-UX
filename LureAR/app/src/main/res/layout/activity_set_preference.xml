@@ -5,21 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lurear.setup.LARSetPreferencesActivity">
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:weightSum="1"
-        >
-        <include
-            android:id="@+id/fragment_custom_nobtn_actionbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            layout="@layout/fragment_custom_nobtn_actionbar" />
-
-    </LinearLayout>
     <LinearLayout
         android:layout_height="1dp"
         android:layout_width="match_parent"
@@ -93,7 +78,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_btn_save"
+                android:src="@mipmap/ic_save_lurenearby"
                 android:adjustViewBounds="true"
                 android:id="@+id/btSave"
                 />

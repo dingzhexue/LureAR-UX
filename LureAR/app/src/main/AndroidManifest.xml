@@ -13,50 +13,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".app.LARSplashActivity"
+        <activity
+            android:name=".app.LARSplashActivity"
             android:theme="@style/AppThemeFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".signup.ui.LARSignInActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".signup.ui.LARSignUpActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".setup.LARAddProfilePictureActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".setup.LARSetPreferencesActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".onboard.ui.LAROnboardActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".setup.LARPersonalInfoActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".home.LARHomeActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".home.LARHomeSideMenuActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".home.LARSelectLocationActivity"
-            android:theme="@style/AppThemeFullScreen"
-            android:screenOrientation="portrait"/>
-
+        <activity
+            android:name=".signup.ui.LARSignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".signup.ui.LARSignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".setup.LARAddProfilePictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".setup.LARSetPreferencesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".onboard.ui.LAROnboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".setup.LARPersonalInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.LARHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".home.LARHomeSideMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".home.LARSelectLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTransparent" />
+        <activity
+            android:name=".CheckInOut.LARCheckInOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen"/>
     </application>
 
 </manifest>

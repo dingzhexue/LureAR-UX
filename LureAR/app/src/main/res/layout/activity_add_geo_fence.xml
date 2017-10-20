@@ -83,14 +83,14 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textSize="@dimen/font_medium2"
-                            android:text="@string/miles_min"
+                            android:text="@string/metres_min"
                             android:layout_marginTop="@dimen/common_padding_medium"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/font_medium2"
-                            android:text="@string/miles"/>
+                            android:text="@string/metres"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -109,8 +109,8 @@
                             app:dsb_rippleColor="@android:color/holo_green_light"
                             app:dsb_mirrorForRtl="false"
                             app:dsb_trackColor="@android:color/darker_gray"
-                            app:dsb_min="0"
-                            app:dsb_max="5" />
+                            app:dsb_min="50"
+                            app:dsb_max="500" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -121,13 +121,13 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:textSize="@dimen/font_medium2"
-                            android:text="@string/miles_max"
+                            android:text="@string/metres_max"
                             android:layout_marginTop="@dimen/common_padding_medium"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/miles"
+                            android:text="@string/metres"
                             android:textSize="@dimen/font_medium2"/>
                     </LinearLayout>
             </LinearLayout>

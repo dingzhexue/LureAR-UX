@@ -43,6 +43,7 @@ public class LARHomeActivity extends LARBaseActivity {
     void homeSideClickListener() {
         Intent intent = new Intent(LARHomeActivity.this, LARHomeSideMenuActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 
     @Override

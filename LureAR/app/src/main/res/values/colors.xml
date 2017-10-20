@@ -9,7 +9,9 @@
     <color name="colorAppRed">#ff2869</color>
     <color name="colorIndicator">#f2f4f4</color>
 <color name="colorRed">#ff0411</color>
+    <color name="colorRed1">#ff2869</color>
     <color name="colorBackground">#23D8AD</color>
     <color name="white">#FFFFFF</color>
 <color name="colorTextviewStroke">#ca35af</color>
+    <color name="colorSoftGray">#ebebeb</color>
 </resources>
