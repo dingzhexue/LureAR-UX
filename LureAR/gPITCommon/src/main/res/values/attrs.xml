@@ -33,13 +33,6 @@
         <attr name="text" format="string|reference" />
     </declare-styleable>
 
-    <declare-styleable name="CustomFont">
-        <attr name="font" format="string" />
-        <attr name="regularFont" format="string" />
-        <attr name="boldFont" format="string" />
-        <attr name="italicFont" format="string" />
-    </declare-styleable>
-
     <attr name="sectionListView.sectionTextViewPadding" format="dimension" />
     <attr name="sectionListView.sectionTextViewTextColor" format="color" />
     <attr name="sectionListView.sectionTextViewTextSize" format="dimension" />
