@@ -22,6 +22,7 @@
     <dimen name="common_padding_medium1">20dp</dimen>
     <dimen name="common_reverse_padding_medium1">-20dp</dimen>
     <dimen name="common_padding_medium2">25dp</dimen>
+    <dimen name="common_padding_medium3">22dp</dimen>
     <dimen name="common_padding_large">30dp</dimen>
     <dimen name="common_padding_large1">40dp</dimen>
     <dimen name="common_padding_large2">50dp</dimen>

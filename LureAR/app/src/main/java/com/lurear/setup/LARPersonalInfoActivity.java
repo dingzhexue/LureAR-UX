@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import android.widget.TextView;
@@ -24,7 +25,13 @@ import com.lurear.R;
 import com.lurear.app.LARCommon;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeActivity;
+import com.lurear.model.LARAddInterestAdapter;
+import com.lurear.model.LARAddInterestsModel;
+import com.lurear.model.LARCheckInOutAdapter;
+import com.lurear.model.LARCheckInOutModel;
 
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -72,6 +79,17 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
         final Drawable upArrow = getResources().getDrawable(R.drawable.ic_back);
         upArrow.setColorFilter(getResources().getColor(R.color.grey), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
+        //Create a AddInterests
+//
+//        ListView checkInOutList;
+//        ArrayList<LARAddInterestsModel> animalList=new ArrayList<>();
+//        checkInOutList = (ListView) findViewById(R.id.checkInOutListView);
+//        animalList.add(new LARAddInterestsModel("Park Plaza"));
+//
+//        LARAddInterestAdapter myAdapter=new LARAddInterestAdapter(this,R.layout.fragment_add_interest_cell,animalList);
+//        checkInOutList.setAdapter(myAdapter);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -121,7 +139,7 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
 
     @OnClick(R.id.btAddInterests)
     void addInterestsClickListener() {
-        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this);
+//        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this);
     }
 
 }

@@ -14,12 +14,19 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.gpit.android.logger.RemoteLogger;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
+import com.lurear.model.LARAddInterestAdapter;
+import com.lurear.model.LARAddInterestsModel;
+import com.lurear.model.LARCheckInOutAdapter;
+import com.lurear.model.LARCheckInOutModel;
 import com.splunk.mint.Mint;
+
+import java.util.ArrayList;
 
 /**
  * Created by administrator on 8/6/17.
@@ -171,6 +178,14 @@ public class LARCommon {
     }
 
     public static void showAddInterestsDialog(final Context context) {
+
+//        ListView itemsList;
+//        ArrayList<LARAddInterestsModel> addItemsList=new ArrayList<>();
+//        itemsList = (ListView) findViewById(R.id.addInterestsItemListView);
+//        addItemsList.add(new LARAddInterestsModel("Park Plaza"));
+//
+//        LARAddInterestAdapter myAdapter=new LARAddInterestAdapter(this,R.layout.fragment_add_interest_cell,addItemsList);
+//        itemsList.setAdapter(myAdapter);
 
         pickerAddInterestsDialog = new Dialog(context);
         pickerAddInterestsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

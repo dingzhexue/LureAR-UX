@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeActivity;
+import com.lurear.nearby.LARLureNearbyActivity;
 import com.lurear.signup.ui.LARSignInActivity;
 import com.lurear.signup.ui.LARSignUpActivity;
 
@@ -79,7 +80,7 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.btSave:
-                Intent intent = new Intent(LARSetPreferencesActivity.this, LARHomeActivity.class);
+                Intent intent = new Intent(LARSetPreferencesActivity.this, LARLureNearbyActivity.class);
                 startActivity(intent);
                 return true;
             default:

@@ -18,6 +18,7 @@
             android:theme="@style/AppThemeFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -60,7 +61,8 @@
         <activity
             android:name=".checkinout.LARCheckInOutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeFullScreen"/>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".nearby.LARLureNearbyActivity"></activity>
     </application>
 
 </manifest>
