@@ -139,7 +139,7 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
 
     @OnClick(R.id.btAddInterests)
     void addInterestsClickListener() {
-//        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this);
+        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this);
     }
 
 }

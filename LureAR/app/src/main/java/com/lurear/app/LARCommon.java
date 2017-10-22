@@ -179,13 +179,7 @@ public class LARCommon {
 
     public static void showAddInterestsDialog(final Context context) {
 
-//        ListView itemsList;
-//        ArrayList<LARAddInterestsModel> addItemsList=new ArrayList<>();
-//        itemsList = (ListView) findViewById(R.id.addInterestsItemListView);
-//        addItemsList.add(new LARAddInterestsModel("Park Plaza"));
-//
-//        LARAddInterestAdapter myAdapter=new LARAddInterestAdapter(this,R.layout.fragment_add_interest_cell,addItemsList);
-//        itemsList.setAdapter(myAdapter);
+
 
         pickerAddInterestsDialog = new Dialog(context);
         pickerAddInterestsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -201,6 +195,23 @@ public class LARCommon {
             }
         });
         pickerAddInterestsDialog.show();
+
+        ListView itemsList;
+        ArrayList<LARAddInterestsModel> addItemsList=new ArrayList<>();
+        itemsList = (ListView) pickerAddInterestsDialog.findViewById(R.id.addInterestsItemListView);
+        addItemsList.add(new LARAddInterestsModel("Soccer"));
+        addItemsList.add(new LARAddInterestsModel("Gymming"));
+        addItemsList.add(new LARAddInterestsModel("Trying New Things"));
+        addItemsList.add(new LARAddInterestsModel("Foodie"));
+        addItemsList.add(new LARAddInterestsModel("BasketBall"));
+        addItemsList.add(new LARAddInterestsModel("Long Drives"));
+        addItemsList.add(new LARAddInterestsModel("Partying"));
+        addItemsList.add(new LARAddInterestsModel("Night Outs"));
+        addItemsList.add(new LARAddInterestsModel("Trekking"));
+        addItemsList.add(new LARAddInterestsModel("Swimming"));
+
+        LARAddInterestAdapter myAdapter=new LARAddInterestAdapter(context,R.layout.fragment_add_interest_cell,addItemsList);
+        itemsList.setAdapter(myAdapter);
 
     }
 }

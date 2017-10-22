@@ -36,7 +36,7 @@
     <string name="add_interests">Add Interests</string>
     <string name="interest_in">Interested In</string>
     <string name="select_age_group">Select Age Group</string>
-    <string name="choose_distance">Choose Distance(Radius)</string>
+    <string name="choose_distance">Choose Distance (Radius)</string>
     <string name="years">Years</string>
     <string name="age_min">18</string>
     <string name="age_max">100</string>

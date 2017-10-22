@@ -4,7 +4,9 @@ package com.lurear.nearby;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lurear.R;
+import com.lurear.home.LARHomeActivity;
 
 import java.util.List;
 
@@ -33,7 +36,7 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LARProduct product = getItem(position);
 
-        ProductViewHolder holder;
+        final ProductViewHolder holder;
 
         if (convertView == null) {
             convertView = new LinearLayout(getContext());
@@ -47,6 +50,7 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
             holder.img = (ImageView)convertView.findViewById(R.id.image);
             holder.title = (TextView)convertView.findViewById(R.id.title);
             holder.imgring=(ImageView)convertView.findViewById(R.id.imagering);
+            holder.imglayout=(ImageView)convertView.findViewById(R.id.imagelayout);
             //
             convertView.setTag(holder);
         }
@@ -57,7 +61,20 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         int resId = getContext().getResources().getIdentifier(product.title.toLowerCase(), "drawable", getContext().getPackageName());
         //
         holder.populate(product,resId);
-
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Drawable drawable = holder.imgring.getDrawable();
+                if (drawable !=null ){
+                    holder.imglayout.setImageResource(R.drawable.ic_png_layout);
+                    holder.imgring.setImageDrawable(null);
+                }
+                else {
+                    Intent intent = new Intent(mContext, LARHomeActivity.class);
+                    mContext.startActivity(intent);
+                }
+            }
+        });
         //
         return convertView;
     }
@@ -67,11 +84,9 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         public ImageView img;
         public TextView title;
         public ImageView imgring;
-
+        public ImageView imglayout;
         void populate(LARProduct p,int resId) {
             title.setText(p.title);
-
-
             img.setImageResource(resId);
             if (p.title!="Selena"){
                 imgring.setImageResource(R.drawable.ic_ring);

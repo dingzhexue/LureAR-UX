@@ -46,7 +46,7 @@ public class LARCheckInOutActivity extends LARBaseActivity {
 
 
     ListView checkInOutList;
-    ArrayList<LARCheckInOutModel> animalList=new ArrayList<>();
+    ArrayList<LARCheckInOutModel> checkItemsList=new ArrayList<>();
 
     @Override
     public boolean supportOffline() {
@@ -64,7 +64,7 @@ public class LARCheckInOutActivity extends LARBaseActivity {
         item.addView(child);
 
         checkInOutList = (ListView) findViewById(R.id.checkInOutListView);
-        LARCheckInOutAdapter myAdapter=new LARCheckInOutAdapter(this,R.layout.fragment_list_cell,animalList);
+        LARCheckInOutAdapter myAdapter=new LARCheckInOutAdapter(this,R.layout.fragment_list_cell,checkItemsList);
         checkInOutList.setAdapter(myAdapter);
 
     }
@@ -110,18 +110,18 @@ public class LARCheckInOutActivity extends LARBaseActivity {
 //        ListView checkInOutList;
 //        ArrayList<LARCheckInOutModel> animalList=new ArrayList<>();
         checkInOutList = (ListView) findViewById(R.id.checkInOutListView);
-        animalList.add(new LARCheckInOutModel("Park Plaza","24th Jul","02:00 PM"));
-        animalList.add(new LARCheckInOutModel("Hyatt Regency","25th Jul","03:10 PM"));
-        animalList.add(new LARCheckInOutModel("Taj Villas","26th Jul","02:00 PM"));
-        animalList.add(new LARCheckInOutModel("Le Meridian","27th Jul","05:00 PM"));
-        animalList.add(new LARCheckInOutModel("Plaza Port Luxary","28th Jul","06:00 AM"));
-        animalList.add(new LARCheckInOutModel("Park Plaza","24th Jul","02:00 PM"));
-        animalList.add(new LARCheckInOutModel("Hyatt Regency","25th Jul","03:10 PM"));
-        animalList.add(new LARCheckInOutModel("Taj Villas","26th Jul","02:00 PM"));
-        animalList.add(new LARCheckInOutModel("Le Meridian","27th Jul","05:00 PM"));
-        animalList.add(new LARCheckInOutModel("Plaza Port Luxary","28th Jul","06:00 AM"));
+        checkItemsList.add(new LARCheckInOutModel("Park Plaza","24th Jul","02:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Hyatt Regency","25th Jul","03:10 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Taj Villas","26th Jul","02:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Le Meridian","27th Jul","05:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Plaza Port Luxary","28th Jul","06:00 AM"));
+        checkItemsList.add(new LARCheckInOutModel("Park Plaza","24th Jul","02:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Hyatt Regency","25th Jul","03:10 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Taj Villas","26th Jul","02:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Le Meridian","27th Jul","05:00 PM"));
+        checkItemsList.add(new LARCheckInOutModel("Plaza Port Luxary","28th Jul","06:00 AM"));
 
-        LARCheckInOutAdapter myAdapter=new LARCheckInOutAdapter(this,R.layout.fragment_list_cell,animalList);
+        LARCheckInOutAdapter myAdapter=new LARCheckInOutAdapter(this,R.layout.fragment_list_cell,checkItemsList);
         checkInOutList.setAdapter(myAdapter);
 
 

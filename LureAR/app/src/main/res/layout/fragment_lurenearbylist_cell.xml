@@ -4,14 +4,29 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     >
-    <ImageView
-        android:paddingTop="@dimen/common_padding_medium"
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
+    <RelativeLayout
         android:layout_gravity="center_horizontal"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/imagelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            />
+
+    </RelativeLayout>
     <ImageView
         android:id="@+id/imagering"
         android:layout_width="16dp"

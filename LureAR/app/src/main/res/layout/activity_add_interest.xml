@@ -3,43 +3,49 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom">
+    android:gravity="bottom"
+    android:paddingLeft="@dimen/common_padding_medium"
+    android:paddingRight="@dimen/common_padding_medium">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/round"
         android:gravity="bottom"
         android:orientation="vertical"
         >
 
-        <ListView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/round">
+            <ListView
+                android:id="@+id/addInterestsItemListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorSoftGray"
+                android:dividerHeight="1dp" />
 
-            android:id="@+id/addInterestsItemListView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-            android:divider="@color/colorSoftGray"
-            android:dividerHeight="1dp" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_padding_small3"
-        android:layout_marginBottom="@dimen/common_padding_small2"
-        android:layout_marginLeft="@dimen/common_padding_medium1"
-        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_marginTop="@dimen/common_padding_small1"
+        android:layout_marginBottom="@dimen/common_padding_small1"
         >
-
         <Button
-            android:id="@+id/btAddInterests"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/round"
-            android:text="@string/add_interests"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/font_large"
+            android:text="Add Interests"
             android:textColor="@color/colorRed1"
-            android:textStyle="bold" />
+            android:padding="@dimen/common_padding_medium"
+            android:id="@+id/btAddInterests" />
     </LinearLayout>
 </LinearLayout>
