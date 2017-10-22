@@ -1,25 +1,18 @@
-package com.lurear.checkinout;
+package com.lurear.home.checkinout;
 
 import android.app.ActionBar;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.home.LARHomeActivity;
 import com.lurear.home.LARHomeSideMenuActivity;
-import com.lurear.home.LARSelectLocationActivity;
 import com.lurear.model.LARCheckInOutAdapter;
 import com.lurear.model.LARCheckInOutModel;
-import com.lurear.nearby.LARLureNearbyActivity;
-import com.lurear.setup.LARSetPreferencesActivity;
 
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;

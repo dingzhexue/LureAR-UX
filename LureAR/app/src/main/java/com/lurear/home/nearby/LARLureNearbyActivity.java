@@ -1,4 +1,4 @@
-package com.lurear.nearby;
+package com.lurear.home.nearby;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -9,15 +9,12 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.home.LARHomeActivity;
-import com.lurear.setup.LARSetPreferencesActivity;
 
 import java.util.ArrayList;
 import java.util.List;

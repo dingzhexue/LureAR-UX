@@ -2,14 +2,12 @@ package com.lurear.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.checkinout.LARCheckInOutActivity;
-import com.lurear.nearby.LARLureNearbyActivity;
+import com.lurear.home.checkinout.LARCheckInOutActivity;
+import com.lurear.home.nearby.LARLureNearbyActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

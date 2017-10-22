@@ -59,10 +59,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTransparent" />
         <activity
-            android:name=".checkinout.LARCheckInOutActivity"
+            android:name=".home.checkinout.LARCheckInOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".nearby.LARLureNearbyActivity" />
+        <activity android:name=".home.nearby.LARLureNearbyActivity" />
         <activity android:name=".geofences.LARGeoFencesActivity" />
     </application>
 

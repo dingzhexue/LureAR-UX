@@ -1,6 +1,6 @@
 // Product.java
 
-package com.lurear.nearby;
+package com.lurear.home.nearby;
 
 
 public class LARProduct{
