@@ -3,7 +3,6 @@ package com.lurear.home.nearby;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -14,13 +13,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lurear.R;
+import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class LARLureNearbyActivity extends AppCompatActivity {
+public class LARLureNearbyActivity extends LARBaseActivity {
     List products;
     ListView gvProducts = null;
     LARProductListAdapterWithCache adapterProducts;
@@ -30,29 +30,15 @@ public class LARLureNearbyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_larlure_nearby);
         TextView tv = new TextView(getApplicationContext());
-
-        // Create a LayoutParams for TextView
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-        // Apply the layout parameters to TextView widget
         tv.setLayoutParams(lp);
-
-        // Set text to display in TextView
         tv.setText(R.string.lure_nearby);
-
-        // Set the text color of TextView
         tv.setTextColor(Color.BLACK);
-        // Set TextView text alignment to center
         tv.setGravity(Gravity.CENTER);
-
-        // Set the ActionBar display option
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-
-        // Finally, set the newly created TextView as ActionBar custom view
         getSupportActionBar().setCustomView(tv);
-        // populate data
         products= new ArrayList();
         products.add(new LARProduct("Natalie","http://farm5.staticflickr.com/4142/4787427683_3672f1db9a_s.jpg"));
         products.add(new LARProduct("Alena","http://farm4.staticflickr.com/3139/2780642603_8d2c90e364_s.jpg"));
@@ -91,5 +77,9 @@ public class LARLureNearbyActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    @Override
+    public boolean supportOffline() {
+        return false;
     }
 }

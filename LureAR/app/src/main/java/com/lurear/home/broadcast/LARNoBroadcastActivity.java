@@ -1,10 +1,9 @@
-package com.lurear.broadcast;
+package com.lurear.home.broadcast;
 
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -17,18 +16,16 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeSideMenuActivity;
-import com.lurear.setup.LARAddProfilePictureActivity;
-import com.lurear.setup.LARPersonalInfoActivity;
 
 import butterknife.OnClick;
 
 
-public class LARBroadcastActivity extends LARBaseActivity {
+public class LARNoBroadcastActivity extends LARBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_broadcast);
+        setContentView(R.layout.activity_no_broadcast);
         TextView tv = new TextView(getApplicationContext());
 
         // Create a LayoutParams for TextView
@@ -38,7 +35,7 @@ public class LARBroadcastActivity extends LARBaseActivity {
 
         tv.setLayoutParams(lp);
 
-        tv.setText(R.string.broadcast);
+        tv.setText(R.string.no_broadcast);
         tv.setTextColor(Color.BLACK);
         tv.setGravity(Gravity.CENTER);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
@@ -59,14 +56,14 @@ public class LARBroadcastActivity extends LARBaseActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(LARBroadcastActivity.this, LARHomeSideMenuActivity.class);
+        Intent intent = new Intent(LARNoBroadcastActivity.this, LARHomeSideMenuActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.enter, R.anim.exit);
         return true;
     }
     @OnClick(R.id.btActivateNow)
-    void onTakePhotoClicked(View view) {
-        Intent intent = new Intent(LARBroadcastActivity.this, LARHomeSideMenuActivity.class);
+    void onActivateNowClicked(View view) {
+        Intent intent = new Intent(LARNoBroadcastActivity.this, LARBroadcastActivity.class);
         startActivity(intent);
     }
 }

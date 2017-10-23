@@ -1,14 +1,10 @@
-package com.lurear.powershop;
+package com.lurear.home.powershop;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +14,6 @@ import android.widget.ImageView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.broadcast.LARBroadcastActivity;
 import com.lurear.home.LARHomeSideMenuActivity;
 
 public class LARPowerShopActivity extends LARBaseActivity {

@@ -66,21 +66,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTransparent" />
         <activity
-            android:name=".checkinout.LARCheckInOutActivity"
+            android:name="com.lurear.home.checkinout.LARCheckInOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".nearby.LARLureNearbyActivity" />
+        <activity android:name="com.lurear.home.nearby.LARLureNearbyActivity" />
         <activity
             android:name=".home.LARAddGeoFenceActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".home.LARAddCheckInActivity"
             android:theme="@style/AppThemeTransparent" />
-        <activity android:name=".geofence.LARGeoFenceActivity" />
-        <activity android:name=".broadcast.LARBroadcastActivity" />
-        <activity android:name=".broadcast.LARNoBroadcastActivity" />
-        <activity android:name=".profile.LARProfileActivity"/>
-        <activity android:name=".powershop.LARPowerShopActivity"
+        <activity android:name=".home.geofence.LARGeoFenceActivity" />
+        <activity android:name=".home.broadcast.LARBroadcastActivity" />
+        <activity android:name=".home.broadcast.LARNoBroadcastActivity" />
+        <activity android:name=".home.profile.LARProfileActivity"/>
+        <activity android:name=".home.powershop.LARPowerShopActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

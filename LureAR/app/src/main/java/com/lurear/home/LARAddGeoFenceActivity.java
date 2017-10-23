@@ -1,27 +1,17 @@
 package com.lurear.home;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
-import android.widget.RelativeLayout;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import com.kyleduo.switchbutton.SwitchButton;
 import com.lurear.R;
 import com.lurear.app.LARCommon;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.checkinout.LARCheckInOutActivity;
 
 import butterknife.BindView;
 

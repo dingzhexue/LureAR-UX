@@ -1,4 +1,4 @@
-package com.lurear.profile;
+package com.lurear.home.profile;
 
 /**
  * Created by security on 10/23/2017.

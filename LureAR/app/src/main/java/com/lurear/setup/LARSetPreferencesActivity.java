@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,9 +18,7 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeActivity;
-import com.lurear.nearby.LARLureNearbyActivity;
-import com.lurear.signup.ui.LARSignInActivity;
-import com.lurear.signup.ui.LARSignUpActivity;
+import com.lurear.home.nearby.LARLureNearbyActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lurear.R;
+import com.lurear.app.LARCommon;
 import com.lurear.home.LARHomeActivity;
 
 import java.util.List;
@@ -24,6 +25,7 @@ import java.util.List;
 public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
     private final Context mContext;
     List<LARProduct> mylist;
+
     public LARProductListAdapterWithCache(Activity  _context, List<LARProduct> _mylist) {
         super(_context, R.layout.fragment_lurenearbylist_cell, _mylist);
 
@@ -35,7 +37,6 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         LARProduct product = getItem(position);
 
         final ProductViewHolder holder;
-
         if (convertView == null) {
             convertView = new LinearLayout(getContext());
 //            String inflater = Context.LAYOUT_INFLATER_SERVICE;
@@ -59,9 +60,20 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         int resId = getContext().getResources().getIdentifier(product.title.toLowerCase(), "drawable", getContext().getPackageName());
         //
         holder.populate(product,resId);
+
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                if (LARCommon.getlastview() != null && v!= LARCommon.getlastview()){
+                    LinearLayout parent = (LinearLayout) (LARCommon.getlastview().getParent().getParent());
+//                    parent.findViewById(R.id.image).setVisibility(View.GONE);
+                    ImageView lastimglayout=(ImageView)parent.findViewById(R.id.imagelayout);
+                    ImageView lastimgring=(ImageView)parent.findViewById(R.id.imagering);
+                    lastimglayout.setImageDrawable(null);
+                    lastimgring.setImageResource(R.drawable.ic_ring);
+                }
+
+                LARCommon.setlastview(v);
                 Drawable drawable = holder.imgring.getDrawable();
                 if (drawable !=null ){
                     holder.imglayout.setImageResource(R.drawable.ic_png_layout);
@@ -77,7 +89,6 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         return convertView;
     }
 
-
     static class ProductViewHolder {
         public ImageView img;
         public TextView title;
@@ -86,9 +97,9 @@ public class LARProductListAdapterWithCache extends ArrayAdapter<LARProduct> {
         void populate(LARProduct p,int resId) {
             title.setText(p.title);
             img.setImageResource(resId);
-            if (p.title!="Selena"){
+
                 imgring.setImageResource(R.drawable.ic_ring);
-            }
+
         }
     }
 

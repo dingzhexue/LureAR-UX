@@ -1,4 +1,4 @@
-package com.lurear.profile;
+package com.lurear.home.profile;
 
 import android.content.Context;
 import android.view.LayoutInflater;

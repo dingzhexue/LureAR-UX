@@ -1,16 +1,14 @@
-package com.lurear.profile;
+package com.lurear.home.profile;
 
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,9 +16,7 @@ import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.broadcast.LARBroadcastActivity;
 import com.lurear.home.LARHomeSideMenuActivity;
-import com.lurear.powershop.LARPowerShopActivity;
 import com.lurear.signup.ui.LARSignInActivity;
 
 import java.util.ArrayList;

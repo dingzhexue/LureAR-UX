@@ -2,18 +2,16 @@ package com.lurear.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.broadcast.LARNoBroadcastActivity;
-import com.lurear.checkinout.LARCheckInOutActivity;
-import com.lurear.geofence.LARGeoFenceActivity;
-import com.lurear.nearby.LARLureNearbyActivity;
-import com.lurear.powershop.LARPowerShopActivity;
-import com.lurear.profile.LARProfileActivity;
+import com.lurear.home.broadcast.LARNoBroadcastActivity;
+import com.lurear.home.checkinout.LARCheckInOutActivity;
+import com.lurear.home.geofence.LARGeoFenceActivity;
+import com.lurear.home.nearby.LARLureNearbyActivity;
+import com.lurear.home.powershop.LARPowerShopActivity;
+import com.lurear.home.profile.LARProfileActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;

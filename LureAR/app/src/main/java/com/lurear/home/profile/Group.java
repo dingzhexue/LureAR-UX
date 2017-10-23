@@ -1,4 +1,4 @@
-package com.lurear.profile;
+package com.lurear.home.profile;
 
 import java.util.ArrayList;
 
