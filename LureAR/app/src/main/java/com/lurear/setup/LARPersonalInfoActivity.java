@@ -57,6 +57,12 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
         setContentView(R.layout.activity_personal_info);
         TextView tv = new TextView(getApplicationContext());
         mIB3.setTag(0);
+        mIB1.setTag(0);
+        mIB2.setTag(0);
+        LARCommon.setInterest1(0);
+        LARCommon.setInterest2(0);
+        LARCommon.setInterest3(0);
+        LARCommon.setSelectinterest(0);
         // Create a LayoutParams for TextView
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
@@ -145,12 +151,23 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
     }
     @OnClick(R.id.btn2)
     void bt2ClickListener() {
-        LARCommon.setSelectinterest(LARCommon.getInterest2());
-        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,2);
+        if (Integer.parseInt(mIB2.getTag().toString())==0) {
+            LARCommon.setSelectinterest(LARCommon.getInterest2());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this, 5);
+        }else{
+            LARCommon.setSelectinterest(LARCommon.getInterest2());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this, 2);
+        }
     }
     @OnClick(R.id.btn1)
     void bt3ClickListener() {
-        LARCommon.setSelectinterest(LARCommon.getInterest1());
-        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,1);
+        if (Integer.parseInt(mIB1.getTag().toString())==0) {
+            LARCommon.setSelectinterest(LARCommon.getInterest1());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this, 4);
+        }
+        else {
+            LARCommon.setSelectinterest(LARCommon.getInterest1());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this, 1);
+        }
     }
 }

@@ -45,7 +45,7 @@ public class LARHomeActivity extends LARBaseActivity implements OnMapReadyCallba
         mMap.addMarker(new
                 MarkerOptions().position(TutorialsPoint).title("Tutorialspoint.com"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(TutorialsPoint));
-        
+
     }
     @OnClick(R.id.btHomePin)
     void homePinClickListener() {

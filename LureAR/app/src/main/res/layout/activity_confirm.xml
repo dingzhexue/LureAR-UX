@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round"
-            android:textSize="@dimen/font_large"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Confirm"
             android:textColor="@color/colorRed1"
             android:padding="@dimen/common_padding_medium"

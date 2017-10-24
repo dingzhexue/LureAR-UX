@@ -307,6 +307,19 @@ public class LARCommon {
                     img3.setImageResource(resId);
                     setInterest3(getSelectinterest());
                 }
+                else if (select==4 && getSelectinterest() != 0){
+                    int resId = context.getResources().getIdentifier("ic_num" + Integer.toString(getSelectinterest()), "drawable", context.getPackageName());
+                    img1.setImageResource(resId);
+                    setInterest1(getSelectinterest());
+                    img2.setImageResource(R.mipmap.ic_add);
+                    img1.setTag(getSelectinterest());
+                }else if (select==5 && getSelectinterest() != 0 && getInterest1() != getSelectinterest()){
+                    int resId = context.getResources().getIdentifier("ic_num" + Integer.toString(getSelectinterest()), "drawable", context.getPackageName());
+                    img2.setImageResource(resId);
+                    setInterest2(getSelectinterest());
+                    img3.setImageResource(R.mipmap.ic_add);
+                    img2.setTag(getSelectinterest());
+                }
                 hideAddInterestsPickerDialog();
             }
 

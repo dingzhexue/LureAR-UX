@@ -88,5 +88,6 @@
     <string name="broadcast_now_description">Activate Broadcast "Available" Status</string>
     <string name="power_shop">Power Shop</string>
     <string name="geo_fence">Geo Fence</string>
+    <string name="profile">Profile</string>
 </resources>
 
