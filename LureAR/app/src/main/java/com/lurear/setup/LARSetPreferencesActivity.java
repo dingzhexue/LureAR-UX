@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,7 +19,9 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
 import com.lurear.home.LARHomeActivity;
-import com.lurear.home.nearby.LARLureNearbyActivity;
+import com.lurear.nearby.LARLureNearbyActivity;
+import com.lurear.signup.ui.LARSignInActivity;
+import com.lurear.signup.ui.LARSignUpActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -77,7 +80,7 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.btSave:
-                Intent intent = new Intent(LARSetPreferencesActivity.this, LARLureNearbyActivity.class);
+                Intent intent = new Intent(LARSetPreferencesActivity.this, LARHomeActivity.class);
                 startActivity(intent);
                 return true;
             default:
@@ -108,7 +111,7 @@ public class LARSetPreferencesActivity extends LARBaseActivity {
 
     @OnClick(R.id.btSave)
     void onSaveClicked(View view) {
-        Intent intent = new Intent(LARSetPreferencesActivity.this, LARHomeActivity.class);
+        Intent intent = new Intent(LARSetPreferencesActivity.this, LARLureNearbyActivity.class);
         startActivity(intent);
     }
 

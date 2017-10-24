@@ -136,6 +136,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/common_padding_large2">
             <TextView
+                android:id="@+id/btGeoFences"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Geo Fences"
@@ -151,6 +152,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/common_padding_large2">
             <TextView
+                android:id="@+id/btPowerShop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Power Shop"
@@ -166,6 +168,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/common_padding_large2">
             <TextView
+                android:id="@+id/btNoBroadcast"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="No Broadcast"
@@ -199,6 +202,7 @@
                 android:layout_width="@dimen/common_padding_large4"
                 android:layout_height="match_parent"
                 android:src="@mipmap/ic_person"
+                android:id="@+id/btHomeProfile"
                />
         </LinearLayout>
 

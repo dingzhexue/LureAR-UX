@@ -72,7 +72,21 @@
     <string name="geo_fence_string1">1 Miles Radius</string>
     <string name="geo_fence_string2">24 Street, Allabella,NYC,United States</string>
     <string name="check_in_out">Check In/Out</string>
+    <string name="check_in">Check In</string>
+    <string name="add_check_in">Add Check In</string>
     <string name="home">Home</string>
     <string name="lure_nearby">Lure Nearby</string>
+    <string name="confirm">Confirm</string>
+    <string name="check_in_loaction">Check In Location</string>
+    <string name="check_in_state">24 Street, Allable, NYC, United States</string>
+    <string name="add_check_in_state">100 Pts will be debitted after Checking In\n to AR Mode</string>
+    <string name="no_broadcast">No Broadcast</string>
+    <string name="activate_now">Activate Now</string>
+    <string name="no_broadcast_description">Activate No Broadcast "Unavailable" Status</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="broadcast_now">Broadcast Now</string>
+    <string name="broadcast_now_description">Activate Broadcast "Available" Status</string>
+    <string name="power_shop">Power Shop</string>
+    <string name="geo_fence">Geo Fence</string>
 </resources>
 

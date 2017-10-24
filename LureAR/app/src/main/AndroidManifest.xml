@@ -13,6 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB5CL204wCoQK9bdWgBQdyTBU9nYZ-TeyM"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <activity
             android:name=".app.LARSplashActivity"
             android:theme="@style/AppThemeFullScreen">
@@ -59,11 +66,22 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeTransparent" />
         <activity
-            android:name=".home.checkinout.LARCheckInOutActivity"
+            android:name=".checkinout.LARCheckInOutActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".home.nearby.LARLureNearbyActivity" />
-        <activity android:name=".geofences.LARGeoFencesActivity" />
+        <activity android:name=".nearby.LARLureNearbyActivity" />
+        <activity
+            android:name=".home.LARAddGeoFenceActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".home.LARAddCheckInActivity"
+            android:theme="@style/AppThemeTransparent" />
+        <activity android:name=".geofence.LARGeoFenceActivity" />
+        <activity android:name=".broadcast.LARBroadcastActivity" />
+        <activity android:name=".broadcast.LARNoBroadcastActivity" />
+        <activity android:name=".profile.LARProfileActivity"/>
+        <activity android:name=".powershop.LARPowerShopActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
 </manifest>

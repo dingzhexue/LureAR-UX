@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.checkinout.LARCheckInOutActivity">
+    tools:context=".checkinout.LARCheckInOutActivity">
 
     <ListView
         android:id="@+id/checkInOutListView"

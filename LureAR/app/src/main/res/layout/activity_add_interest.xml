@@ -20,12 +20,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/round">
-            <ListView
-                android:id="@+id/addInterestsItemListView"
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/addInterestItemRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@color/colorSoftGray"
-                android:dividerHeight="1dp" />
+                android:scrollbars="vertical" />
 
         </LinearLayout>
 
@@ -35,8 +36,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_padding_small1"
-        android:layout_marginBottom="@dimen/common_padding_small1"
+        android:layout_marginTop="@dimen/common_padding_small2"
+        android:layout_marginBottom="@dimen/common_padding_small2"
         >
         <Button
             android:layout_width="match_parent"

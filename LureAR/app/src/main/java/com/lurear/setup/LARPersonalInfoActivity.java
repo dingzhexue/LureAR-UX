@@ -13,10 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import android.widget.TextView;
@@ -24,17 +21,12 @@ import android.widget.TextView;
 import com.lurear.R;
 import com.lurear.app.LARCommon;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.home.LARHomeActivity;
-import com.lurear.model.LARAddInterestAdapter;
-import com.lurear.model.LARAddInterestsModel;
-import com.lurear.model.LARCheckInOutAdapter;
-import com.lurear.model.LARCheckInOutModel;
 
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+
+import static android.view.View.inflate;
 
 /**
  * Created by administrator on 10/13/2017.
@@ -52,16 +44,19 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
 
     @BindView(R.id.btTransGender)
     ImageView mIBTransGender;
-
-    @BindView(R.id.btAddInterests)
-    ImageView mIBAddInterests;
+    @BindView(R.id.btn1)
+    ImageView mIB1;
+    @BindView(R.id.btn2)
+    ImageView mIB2;
+    @BindView(R.id.btn3)
+    ImageView mIB3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_info);
         TextView tv = new TextView(getApplicationContext());
-
+        mIB3.setTag(0);
         // Create a LayoutParams for TextView
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
@@ -83,11 +78,11 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
         //Create a AddInterests
 //
 //        ListView checkInOutList;
-//        ArrayList<LARAddInterestsModel> animalList=new ArrayList<>();
+//        ArrayList<LARAddGeoFenceModel> animalList=new ArrayList<>();
 //        checkInOutList = (ListView) findViewById(R.id.checkInOutListView);
-//        animalList.add(new LARAddInterestsModel("Park Plaza"));
+//        animalList.add(new LARAddGeoFenceModel("Park Plaza"));
 //
-//        LARAddInterestAdapter myAdapter=new LARAddInterestAdapter(this,R.layout.fragment_add_interest_cell,animalList);
+//        LARAddGeoFenceAdapter myAdapter=new LARAddGeoFenceAdapter(this,R.layout.fragment_add_interest_cell,animalList);
 //        checkInOutList.setAdapter(myAdapter);
 
     }
@@ -137,9 +132,25 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
         mIBTransGender.setImageResource(R.mipmap.ic_btn_transgender_ena);
     }
 
-    @OnClick(R.id.btAddInterests)
+    @OnClick(R.id.btn3)
     void addInterestsClickListener() {
-        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this);
+        if (Integer.parseInt(mIB3.getTag().toString())==0){
+            LARCommon.setSelectinterest(LARCommon.getInterest3());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,0);
+        }
+        else{
+            LARCommon.setSelectinterest(LARCommon.getInterest3());
+            LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,3);
+        }
     }
-
+    @OnClick(R.id.btn2)
+    void bt2ClickListener() {
+        LARCommon.setSelectinterest(LARCommon.getInterest2());
+        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,2);
+    }
+    @OnClick(R.id.btn1)
+    void bt3ClickListener() {
+        LARCommon.setSelectinterest(LARCommon.getInterest1());
+        LARCommon.showAddInterestsDialog(LARPersonalInfoActivity.this,1);
+    }
 }

@@ -63,10 +63,10 @@
                         <ImageView
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/ic_football"
+
                             android:scaleType="centerInside"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnFootball"
+                            android:id="@+id/btn1"
                             />
                     </LinearLayout>
 
@@ -78,9 +78,9 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:scaleType="centerInside"
-                            android:src="@mipmap/ic_car"
+
                             android:adjustViewBounds="true"
-                            android:id="@+id/btnCar"
+                            android:id="@+id/btn2"
                             />
                     </LinearLayout>
 
@@ -96,7 +96,7 @@
                             android:scaleType="centerInside"
                             android:src="@mipmap/ic_add"
                             android:adjustViewBounds="true"
-                            android:id="@+id/btAddInterests"
+                            android:id="@+id/btn3"
                             />
                     </LinearLayout>
 
