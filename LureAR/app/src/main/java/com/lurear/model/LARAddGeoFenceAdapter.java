@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 
 public class LARAddGeoFenceAdapter extends ArrayAdapter<LARAddGeoFenceModel> {
-
+     View lastview;
     ArrayList<LARAddGeoFenceModel> itemslList = new ArrayList<>();
 
     public LARAddGeoFenceAdapter(Context context, int textViewResourceId, ArrayList<LARAddGeoFenceModel> objects) {
@@ -33,7 +33,7 @@ public class LARAddGeoFenceAdapter extends ArrayAdapter<LARAddGeoFenceModel> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
 
         View v = convertView;
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -44,7 +44,10 @@ public class LARAddGeoFenceAdapter extends ArrayAdapter<LARAddGeoFenceModel> {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-
+                if (lastview!=null){
+                    CheckBox lastcheckbox=lastview.findViewById(R.id.checkSwim);
+                    lastcheckbox.setChecked(false);
+                }
                 CheckBox checkBoxSwim = (CheckBox)v.findViewById(R.id.checkSwim) ;
 
                 if(checkBoxSwim.isChecked()){
@@ -52,6 +55,7 @@ public class LARAddGeoFenceAdapter extends ArrayAdapter<LARAddGeoFenceModel> {
                 }else{
                     checkBoxSwim.setChecked(true);
                 }
+                lastview=v;
 
             }
         });

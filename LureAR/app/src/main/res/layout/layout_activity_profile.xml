@@ -53,22 +53,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:weightSum="9"
         android:layout_weight="7">
         <ExpandableListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="7"
             android:id="@+id/exp_list"></ExpandableListView>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginTop="8dp"
-            android:padding="15dp">
+            android:layout_height="0dp"
+            android:layout_weight="2">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
                 android:text="Log Out"
-                android:textSize="20sp"
+                android:textSize="16sp"
+                android:background="@color/white"
                 android:textColor="@color/colorRed"
                 android:id="@+id/tvlogout"/>
         </LinearLayout>

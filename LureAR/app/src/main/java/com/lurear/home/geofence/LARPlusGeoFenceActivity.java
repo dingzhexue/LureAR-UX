@@ -3,32 +3,30 @@ package com.lurear.home.geofence;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lurear.R;
 import com.lurear.base.LARBaseActivity;
-import com.lurear.home.LARHomeSideMenuActivity;
-import com.lurear.model.LARGeoFenceAdapter;
-import com.lurear.model.LARGeoFenceModel;
-
-import java.util.ArrayList;
+import com.lurear.home.LARAddCheckInActivity;
+import com.lurear.home.LARHomeActivity;
+import com.lurear.home.LARSelectLocationActivity;
 
 
-public class LARGeoFenceActivity extends LARBaseActivity {
+public class LARPlusGeoFenceActivity extends LARBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_geo_fence);
-
+        setContentView(R.layout.activity_plus_geo_fence);
         TextView tv = new TextView(getApplicationContext());
 
         // Create a LayoutParams for TextView
@@ -39,49 +37,32 @@ public class LARGeoFenceActivity extends LARBaseActivity {
         tv.setLayoutParams(lp);
 
         tv.setText(R.string.geo_fence);
-        tv.setTextColor(Color.BLACK);
+        tv.setTextColor(Color.WHITE);
         tv.setGravity(Gravity.CENTER);
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(tv);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final Drawable upArrow = getResources().getDrawable(R.mipmap.ic_btn_left_side);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_add);
+        upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
-
-//        LinearLayout item = (LinearLayout)findViewById(R.id.layoutListView);
-//        View child = getLayoutInflater().inflate(R.layout.activity_geo_fence, null);
-//        item.addView(child);
-
-        ListView geoListView;
-        ArrayList<LARGeoFenceModel> geoItemsList=new ArrayList<>();
-
-        geoListView = (ListView) findViewById(R.id.geoFenceListView);
-        geoItemsList.add(new LARGeoFenceModel("Home","24 Street,Allabella,NYC, United States","200Mtr"));
-        geoItemsList.add(new LARGeoFenceModel("Work-Place","24 Street,Allabella,NYC, United States","200Mtr"));
-        geoItemsList.add(new LARGeoFenceModel("Gym","24 Street,Allabella,NYC, United States","200Mtr"));
-        geoItemsList.add(new LARGeoFenceModel("Home2","24 Street,Allabella,NYC, United States","200Mtr"));
-        geoItemsList.add(new LARGeoFenceModel("Friends Resi","24 Street,Allabella,NYC, United States","200Mtr"));
-
-        LARGeoFenceAdapter myAdapter=new LARGeoFenceAdapter(this,R.layout.fragment_geofence_list_cell,geoItemsList);
-        geoListView.setAdapter(myAdapter);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(LARGeoFenceActivity.this, LARHomeSideMenuActivity.class);
+        Intent intent = new Intent(LARPlusGeoFenceActivity.this, LARSelectLocationActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.enter, R.anim.exit);
         return true;
     }
-
     @Override
     public boolean supportOffline() {
         return false;
     }
-
 }
