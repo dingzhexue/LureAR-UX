@@ -74,10 +74,9 @@ public class LARProfileActivity extends LARBaseActivity {
     //Set Data to ExpandableListView..
     public ArrayList<Group> SetStandardGroups() {
 
-        String group_names[] = { "PERSONAL INFO", "PREFERENCES" };
+        String group_names[] = { "PERSONAL INFO","" };
 
-        String personal_item[] = {"Age", "Gender", "Interests", "Offers"};
-        String prefference_item[] = {"Gender, Distance, Age"};
+        String personal_item[] = {"Age", "Gender", "Interests"};
         int image = R.mipmap.ic_arrow;
         ArrayList<Group> list = new ArrayList<Group>();
 
@@ -98,17 +97,9 @@ public class LARProfileActivity extends LARBaseActivity {
                     ch.setImage(image);
                     ch_list.add(ch);
                 }
-            }else{
-                for (; j < prefference_item.length; j++) {
-                    Child ch = new Child();
-                    ch.setName(prefference_item[j]);
-                    ch.setImage(image);
-                    ch_list.add(ch);
-                }
             }
             gru.setItems(ch_list);
             list.add(gru);
-
         }
 
         return list;

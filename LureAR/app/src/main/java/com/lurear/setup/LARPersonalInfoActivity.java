@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -64,9 +65,9 @@ public class LARPersonalInfoActivity extends LARBaseActivity {
         LARCommon.setInterest3(0);
         LARCommon.setSelectinterest(0);
         // Create a LayoutParams for TextView
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.MATCH_PARENT, // Width of TextView
-                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        ConstraintLayout.LayoutParams lp = new ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.MATCH_PARENT, // Width of TextView
+                ConstraintLayout.LayoutParams.WRAP_CONTENT);
 
         tv.setLayoutParams(lp);
 

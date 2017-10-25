@@ -24,7 +24,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_broadcast"/>
+                    android:src="@mipmap/ic_no_broadcast"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_broadcast"
+                    android:text="@string/not_broadcast"
                     android:textSize="@dimen/font_extra2"
                     android:textColor="@color/colorFont"/>
             </LinearLayout>
@@ -72,7 +72,7 @@
                         android:id="@+id/btActivateNow"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@mipmap/ic_activate_now"/>
+                        android:src="@mipmap/ic_bt_broadcast"/>
                 </LinearLayout>
 
             </LinearLayout>

@@ -33,6 +33,8 @@ import com.lurear.model.LARAddGeoFenceAdapter;
 import com.lurear.model.LARAddGeoFenceModel;
 import com.lurear.model.LARAddInterestAdapter;
 import com.lurear.model.LARAddInterestsModel;
+import com.lurear.model.LARProfileMapAdapter;
+import com.lurear.model.LARProfileMapModel;
 import com.splunk.mint.Mint;
 
 import java.util.ArrayList;
@@ -119,10 +121,19 @@ public class LARCommon {
     }
 
     private static Dialog pickerDistanceDialog;
+    private static Dialog pickerProfileMapViewDialog;
     private static Dialog pickerAddGeoFenceDialog;
     private static Dialog pickerHomeGeoFenceDialog;
     private static Dialog pickerAddInterestsDialog;
     private static Dialog pickerAddCheckInDialog;
+
+    public static void hidePickerProfileMapViewDialog() {
+        if (pickerProfileMapViewDialog != null && pickerProfileMapViewDialog.isShowing()) {
+            pickerProfileMapViewDialog.hide();
+            pickerProfileMapViewDialog = null;
+        }
+    }
+
 
     public static void hidePickerDialog() {
         if (pickerDistanceDialog != null && pickerDistanceDialog.isShowing()) {
@@ -178,6 +189,43 @@ public class LARCommon {
         });
 
         pickerDistanceDialog.show();
+    }
+
+    public static void showProfileMapViewPickerDialog(final Context context) {
+
+        pickerProfileMapViewDialog = new Dialog(context);
+
+        pickerProfileMapViewDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        pickerProfileMapViewDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        pickerProfileMapViewDialog.setContentView(R.layout.activity_mapview_profile);
+        pickerProfileMapViewDialog.setCancelable(true);
+        pickerProfileMapViewDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        pickerProfileMapViewDialog.getWindow().setGravity(Gravity.CENTER);
+        //pickerProfileMapViewDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        pickerProfileMapViewDialog.show();
+//        Button btnCL = (Button)pickerProfileMapViewDialog.findViewById(R.id.btSave);
+//        btnCL.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                hidePickerProfileMapViewDialog();
+//            }
+//        });
+
+        ListView itemsList;
+        ArrayList<LARProfileMapModel> profileInterestItemList=new ArrayList<>();
+        itemsList = (ListView) pickerProfileMapViewDialog.findViewById(R.id.profileMapListView);
+        profileInterestItemList.add(new LARProfileMapModel("Long Drives"));
+        profileInterestItemList.add(new LARProfileMapModel("Try New Food"));
+        profileInterestItemList.add(new LARProfileMapModel("Soccer"));
+
+        LARProfileMapAdapter myAdapter=new LARProfileMapAdapter(context,R.layout.fragment_profilemap_cell,profileInterestItemList);
+        itemsList.setAdapter(myAdapter);
+//        pickerProfileMapViewDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//            @Override
+//            public void onDismiss(DialogInterface dialogInterface) {
+//                Intent intent = new Intent(context, LARAddGeoFenceActivity.class);
+//                context.startActivity(intent);
+//            }
+//        });
     }
 
     public static void showAddGeoFenceDialog(final Context context) {

@@ -13,6 +13,8 @@ import com.lurear.model.LARCheckInOutAdapter;
 import com.lurear.model.LARCheckInOutModel;
 
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -86,7 +88,7 @@ public class LARCheckInOutActivity extends LARBaseActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
 
         tv.setLayoutParams(lp);
-
+        //tv.setBackgroundColor(Color.BLACK);
         tv.setText(R.string.check_in_out);
         tv.setTextColor(Color.BLACK);
         tv.setGravity(Gravity.CENTER);
@@ -116,8 +118,12 @@ public class LARCheckInOutActivity extends LARBaseActivity {
 
         LARCheckInOutAdapter myAdapter=new LARCheckInOutAdapter(this,R.layout.fragment_list_cell,checkItemsList);
         checkInOutList.setAdapter(myAdapter);
-
-
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -19,6 +19,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.lurear.R;
 import com.lurear.app.LARCommon;
@@ -27,7 +28,7 @@ import com.lurear.base.LARBaseActivity;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class LARHomeActivity extends LARBaseActivity implements OnMapReadyCallback {
+public class LARHomeActivity extends LARBaseActivity implements OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
     @BindView(R.id.btHomeSide)
     ImageView mIBHomeSide;
 
@@ -37,6 +38,7 @@ public class LARHomeActivity extends LARBaseActivity implements OnMapReadyCallba
     @BindView(R.id.btSelectGeoFence)
     ImageView mIBSelectGeoFence;
     private GoogleMap mMap;
+    private Marker myMarker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +50,26 @@ public class LARHomeActivity extends LARBaseActivity implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMarkerClickListener(this);
         // Add a marker in Sydney and move the camera
         LatLng exammarker = new LatLng(21, 57);
         View marker = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.fragment_marker, null);
         //ImageView imgmarker=(ImageView)findViewById(R.id.img_marker);
 
-        mMap.addMarker(new
+        myMarker=mMap.addMarker(new
                 MarkerOptions().position(exammarker).title("Selena").icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(this, marker))));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(exammarker));
 
+    }
+    @Override
+    public boolean onMarkerClick(final Marker marker) {
+
+        if (marker.equals(myMarker))
+        {
+            //handle click here
+            LARCommon.showProfileMapViewPickerDialog(LARHomeActivity.this);
+        }
+        return true;
     }
     public static Bitmap createDrawableFromView(Context context, View view) {
         DisplayMetrics displayMetrics = new DisplayMetrics();

@@ -81,10 +81,11 @@
     <string name="check_in_state">24 Street, Allable, NYC, United States</string>
     <string name="add_check_in_state">100 Pts will be debitted after Checking In\n to AR Mode</string>
     <string name="no_broadcast">No Broadcast</string>
+    <string name="not_broadcast">Not Broadcast</string>
     <string name="activate_now">Activate Now</string>
-    <string name="no_broadcast_description">Activate No Broadcast "Unavailable" Status</string>
+    <string name="no_broadcast_description">You are currently invisible to the World</string>
     <string name="broadcast">Broadcast</string>
-    <string name="broadcast_now">Broadcast Now</string>
+    <string name="broadcast_now">Broadcasting</string>
     <string name="broadcast_now_description">Activate Broadcast "Available" Status</string>
     <string name="power_shop">Power Shop</string>
     <string name="geo_fence">Geo Fence</string>
