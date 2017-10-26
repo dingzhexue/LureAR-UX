@@ -201,7 +201,22 @@ public class LARCommon {
         pickerProfileMapViewDialog.setCancelable(true);
         pickerProfileMapViewDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         pickerProfileMapViewDialog.getWindow().setGravity(Gravity.CENTER);
-        //pickerProfileMapViewDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        final ImageView mapcheckin=(ImageView) pickerProfileMapViewDialog.findViewById(R.id.ic_map_checkin);
+        final ImageView archeckin=(ImageView) pickerProfileMapViewDialog.findViewById(R.id.ic_ar_checkin);
+        mapcheckin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mapcheckin.setImageResource(R.mipmap.ic_bt_map_checkin);
+                archeckin.setImageResource(R.mipmap.ic_bt_ar_checkin);
+            }
+        });
+        archeckin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mapcheckin.setImageResource(R.mipmap.ic_bt_map_checkin_dis);
+                archeckin.setImageResource(R.mipmap.ic_bt_ar_checkin_dis);
+            }
+        });
         pickerProfileMapViewDialog.show();
 //        Button btnCL = (Button)pickerProfileMapViewDialog.findViewById(R.id.btSave);
 //        btnCL.setOnClickListener(new View.OnClickListener() {
